@@ -5,7 +5,10 @@ const Comp = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("/api/historical-token");
-      console.log("🚀 ~ fetch ~ response:", response);
+      
+      const data = await response.json();
+
+      console.log("🚀 ~ fetchData ~ data: 11", data)
     }
     fetchData();
   }, []);
